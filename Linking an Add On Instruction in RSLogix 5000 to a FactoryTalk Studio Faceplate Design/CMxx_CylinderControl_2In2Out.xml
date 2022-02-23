@@ -1,0 +1,758 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gfx xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="Gfx-ME5.xsd">
+    <displaySettings displayType="replace" securityCode="*" backColor="white" maximumTagUpdateRate="1" focusHighlightColor="lime" disableFocusHighlight="false" width="800" height="600" displayNumber="1" disableInitialInputFocus="false" startupMacro="" shutdownMacro=""/>
+    <text name="Text1" height="16" width="371" left="18" top="13" visible="true" wallpaper="false" isReferenceObject="false" backStyle="transparent" backColor="white" foreColor="black" wordWrap="true" sizeToFit="true" alignment="middleCenter" fontFamily="Arial" charHeight="16" charWidth="6" bold="true" italic="false" underline="true" strikethrough="false" caption="CylinderControl_2In2Out                                                      "/>
+    <group name="Cylinder_Retracted1" visible="true" wallpaper="false" isReferenceObject="false">
+        <multistateIndicator name="MultistateIndicator10" height="18" width="56" left="27" top="205" visible="true" isReferenceObject="false" backStyle="solid" borderStyle="line" borderUsesBackColor="false" borderWidth="1" description="" shape="rectangle" triggerType="value" currentStateId="1" captionOnBorder="false" setLastStateId="2">
+            <states>
+                <state stateId="Error" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false">
+                    <caption fontFamily="Arial" fontSize="9" bold="false" italic="false" underline="false" strikethrough="false" caption="Error" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false"/>
+                    <imageSettings imageName="" alignment="middleCenter" backStyle="transparent" color="white" backColor="navy" scaled="false" blink="false"/>
+                </state>
+                <state stateId="0" value="0" backColor="gray" borderColor="black" patternColor="white" patternStyle="none" blink="false">
+                    <caption fontFamily="Arial" fontSize="9" bold="false" italic="false" underline="false" strikethrough="false" caption="/*LS:0 {#3}*/" color="black" backColor="black" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false"/>
+                    <imageSettings imageName="" alignment="middleCenter" backStyle="transparent" color="white" backColor="black" scaled="false" blink="false"/>
+                </state>
+                <state stateId="1" value="1" backColor="#40FF10" borderColor="black" patternColor="white" patternStyle="none" blink="false">
+                    <caption fontFamily="Arial" fontSize="9" bold="false" italic="false" underline="false" strikethrough="false" caption="/*LS:0 {#3}*/" color="black" backColor="black" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false"/>
+                    <imageSettings imageName="" alignment="middleCenter" backStyle="transparent" color="white" backColor="black" scaled="false" blink="false"/>
+                </state>
+            </states>
+            <connections>
+                <connection name="Indicator" expression="{#2.Inp_Retracted}"/>
+            </connections>
+        </multistateIndicator>
+        <parameters>
+            <parameter name="#2" description="PLC address &amp; AOI name e.g. {::[AOI]Program:MainProgram.Cylinder2In1Out}" value=""/>
+            <parameter name="#3" description="Retracted Elecrical Reference e.g. RI001" value=""/>
+        </parameters>
+    </group>
+    <group name="Cylinder_Extended1" visible="true" wallpaper="false" isReferenceObject="false">
+        <multistateIndicator name="MultistateIndicator9" height="18" width="56" left="147" top="205" visible="true" isReferenceObject="false" backStyle="solid" borderStyle="line" borderUsesBackColor="false" borderWidth="1" description="" shape="rectangle" triggerType="value" currentStateId="0" captionOnBorder="false" setLastStateId="2">
+            <states>
+                <state stateId="Error" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false">
+                    <caption fontFamily="Arial" fontSize="9" bold="false" italic="false" underline="false" strikethrough="false" caption="Error" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false"/>
+                    <imageSettings imageName="" alignment="middleCenter" backStyle="transparent" color="white" backColor="navy" scaled="false" blink="false"/>
+                </state>
+                <state stateId="0" value="0" backColor="gray" borderColor="black" patternColor="white" patternStyle="none" blink="false">
+                    <caption fontFamily="Arial" fontSize="9" bold="false" italic="false" underline="false" strikethrough="false" caption="/*LS:0 {#4}*/" color="black" backColor="black" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false"/>
+                    <imageSettings imageName="" alignment="middleCenter" backStyle="transparent" color="white" backColor="black" scaled="false" blink="false"/>
+                </state>
+                <state stateId="1" value="1" backColor="#40FF10" borderColor="black" patternColor="white" patternStyle="none" blink="false">
+                    <caption fontFamily="Arial" fontSize="9" bold="false" italic="false" underline="false" strikethrough="false" caption="/*LS:0 {#4}*/" color="black" backColor="black" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false"/>
+                    <imageSettings imageName="" alignment="middleCenter" backStyle="transparent" color="white" backColor="black" scaled="false" blink="false"/>
+                </state>
+            </states>
+            <connections>
+                <connection name="Indicator" expression="{#2.Inp_Extended}"/>
+            </connections>
+        </multistateIndicator>
+        <parameters>
+            <parameter name="#2" description="PLC address &amp; AOI name e.g. {::[AOI]Program:MainProgram.Cylinder2In1Out}" value=""/>
+            <parameter name="#4" description="Extended Elecrical Reference e.g. EI001" value=""/>
+        </parameters>
+    </group>
+    <text name="Text8" height="16" width="57" left="87" top="206" visible="true" wallpaper="false" isReferenceObject="false" backStyle="transparent" backColor="white" foreColor="black" wordWrap="true" sizeToFit="true" alignment="middleCenter" fontFamily="Arial" fontSize="10" bold="false" italic="false" underline="false" strikethrough="false" caption="Retracted"/>
+    <text name="Text9" height="16" width="56" left="206" top="205" visible="true" wallpaper="false" isReferenceObject="false" backStyle="transparent" backColor="white" foreColor="black" wordWrap="true" sizeToFit="true" alignment="middleCenter" fontFamily="Arial" fontSize="10" bold="false" italic="false" underline="false" strikethrough="false" caption="Extended"/>
+    <group name="Cylinder_Setup1" visible="true" wallpaper="false" isReferenceObject="false">
+        <panel name="Panel9" height="157" width="300" left="280" top="37" visible="true" isReferenceObject="false" backStyle="solid" patternStyle="none" backColor="silver" patternColor="white" blink="false" description="" borderColor="silver" borderStyle="raisedInset" borderWidth="6" borderUsesBackColor="true"/>
+        <text name="Text34" height="16" width="274" left="293" top="46" visible="true" isReferenceObject="false" backStyle="transparent" backColor="white" foreColor="black" wordWrap="false" sizeToFit="false" alignment="middleCenter" fontFamily="Arial" fontSize="10" bold="true" italic="false" underline="false" strikethrough="false" caption="/*LS:0 {#1}*/"/>
+        <text name="Text36" height="16" width="180" left="291" top="68" visible="true" isReferenceObject="false" backStyle="transparent" backColor="white" foreColor="black" wordWrap="false" sizeToFit="false" alignment="middleLeft" fontFamily="Arial" fontSize="9" bold="false" italic="false" underline="false" strikethrough="false" caption="Cylinder Fault Time"/>
+        <text name="Text37" height="16" width="180" left="291" top="92" visible="true" isReferenceObject="false" backStyle="transparent" backColor="white" foreColor="black" wordWrap="false" sizeToFit="false" alignment="middleLeft" fontFamily="Arial" fontSize="9" bold="false" italic="false" underline="false" strikethrough="false" caption="Extend Delay Time"/>
+        <text name="Text38" height="16" width="180" left="291" top="116" visible="true" isReferenceObject="false" backStyle="transparent" backColor="white" foreColor="black" wordWrap="false" sizeToFit="false" alignment="middleLeft" fontFamily="Arial" fontSize="9" bold="false" italic="false" underline="false" strikethrough="false" caption="Retract Delay Time"/>
+        <text name="Text48" height="16" width="180" left="291" top="140" visible="true" isReferenceObject="false" backStyle="transparent" backColor="white" foreColor="black" wordWrap="false" sizeToFit="false" alignment="middleLeft" fontFamily="Arial" fontSize="9" bold="false" italic="false" underline="false" strikethrough="false" caption="Extended Debounce Time"/>
+        <text name="Text58" height="16" width="180" left="291" top="164" visible="true" isReferenceObject="false" backStyle="transparent" backColor="white" foreColor="black" wordWrap="false" sizeToFit="false" alignment="middleLeft" fontFamily="Arial" fontSize="9" bold="false" italic="false" underline="false" strikethrough="false" caption="Retracted Debounce Time"/>
+        <text name="Text82" height="16" width="86" left="480" top="68" visible="true" isReferenceObject="false" backStyle="transparent" backColor="white" foreColor="black" wordWrap="true" sizeToFit="false" alignment="middleRight" fontFamily="Arial" fontSize="9" bold="false" italic="false" underline="false" strikethrough="false" caption="/*N:5 {#2.Cfg_FaultTime} NOFILL DP:0*/ ms">
+            <animations>
+                <animateVisibility expression="CurrentUserHasCode(P)" expressionTrueState="invisible"/>
+            </animations>
+        </text>
+        <text name="Text84" height="16" width="86" left="480" top="92" visible="true" isReferenceObject="false" backStyle="transparent" backColor="white" foreColor="black" wordWrap="true" sizeToFit="false" alignment="middleRight" fontFamily="Arial" fontSize="9" bold="false" italic="false" underline="false" strikethrough="false" caption="/*N:5 {#2.Cfg_ExtendDelay} NOFILL DP:0*/ ms">
+            <animations>
+                <animateVisibility expression="CurrentUserHasCode(P)" expressionTrueState="invisible"/>
+            </animations>
+        </text>
+        <text name="Text86" height="16" width="86" left="480" top="140" visible="true" isReferenceObject="false" backStyle="transparent" backColor="white" foreColor="black" wordWrap="true" sizeToFit="false" alignment="middleRight" fontFamily="Arial" fontSize="9" bold="false" italic="false" underline="false" strikethrough="false" caption="/*N:5 {#2.Cfg_ExtCondTime} NOFILL DP:0*/ ms">
+            <animations>
+                <animateVisibility expression="CurrentUserHasCode(P)" expressionTrueState="invisible"/>
+            </animations>
+        </text>
+        <text name="Text87" height="16" width="86" left="480" top="164" visible="true" isReferenceObject="false" backStyle="transparent" backColor="white" foreColor="black" wordWrap="true" sizeToFit="false" alignment="middleRight" fontFamily="Arial" fontSize="9" bold="false" italic="false" underline="false" strikethrough="false" caption="/*N:5 {#2.Cfg_RetCondTime} NOFILL DP:0*/ ms">
+            <animations>
+                <animateVisibility expression="CurrentUserHasCode(P)" expressionTrueState="invisible"/>
+            </animations>
+        </text>
+        <text name="Text15" height="16" width="86" left="480" top="116" visible="true" isReferenceObject="false" backStyle="transparent" backColor="white" foreColor="black" wordWrap="true" sizeToFit="false" alignment="middleRight" fontFamily="Arial" fontSize="9" bold="false" italic="false" underline="false" strikethrough="false" caption="/*N:5 {#2.Cfg_RetractDelay} NOFILL DP:0*/ ms"/>
+        <numericInputEnable name="CylinderFaultTime" height="23" width="86" left="480" top="65" visible="true" isReferenceObject="false" audio="true" backColor="cyan" backStyle="solid" borderStyle="raised" borderUsesBackColor="true" borderWidth="4" description="" highlightColor="lime" borderColor="navy" patternColor="white" patternStyle="none" horizontalMargin="0" verticalMargin="0" shape="rectangle" touch="true" blink="false" enterKeyControlDelay="400" enterKeyHandshakeTime="4" enterKeyHoldTime="250" handshakeReset="nonZeroValue" keyNavigation="true" decimalPoint="implicit" numericPopup="keypad" rampValue="0" useVariableMinMax="true" takeFocusOnPress="false" minValue="0" maxValue="99999" captionOnBorder="false">
+            <caption fontFamily="Arial" fontSize="9" bold="false" italic="false" underline="false" strikethrough="false" caption="/*N:5 {#2.Cfg_FaultTime} NOFILL DP:0*/ ms" color="black" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false"/>
+            <imageSettings imageName="" alignment="middleCenter" backStyle="transparent" color="white" backColor="navy" scaled="false" blink="false"/>
+            <animations>
+                <animateVisibility expression="CurrentUserHasCode(P)" expressionTrueState="visible"/>
+            </animations>
+            <connections>
+                <connection name="Value" expression="{#2.Cfg_FaultTime}"/>
+                <connection name="Minimum" expression="&quot;#3&quot;"/>
+                <connection name="Maximum" expression="&quot;#4&quot;"/>
+            </connections>
+        </numericInputEnable>
+        <numericInputEnable name="NumericInputEnable2" height="23" width="86" left="480" top="89" visible="true" isReferenceObject="false" audio="true" backColor="cyan" backStyle="solid" borderStyle="raised" borderUsesBackColor="true" borderWidth="4" description="" highlightColor="lime" borderColor="navy" patternColor="white" patternStyle="none" horizontalMargin="0" verticalMargin="0" shape="rectangle" touch="true" blink="false" enterKeyControlDelay="400" enterKeyHandshakeTime="4" enterKeyHoldTime="250" handshakeReset="nonZeroValue" keyNavigation="true" decimalPoint="implicit" numericPopup="keypad" rampValue="0" useVariableMinMax="true" takeFocusOnPress="false" minValue="0" maxValue="5000" captionOnBorder="false">
+            <caption fontFamily="Arial" fontSize="9" bold="false" italic="false" underline="false" strikethrough="false" caption="/*N:5 {#2.Cfg_ExtendDelay} NOFILL DP:0*/ ms" color="black" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false"/>
+            <imageSettings imageName="" alignment="middleCenter" backStyle="transparent" color="white" backColor="navy" scaled="false" blink="false"/>
+            <animations>
+                <animateVisibility expression="CurrentUserHasCode(P)" expressionTrueState="visible"/>
+            </animations>
+            <connections>
+                <connection name="Value" expression="{#2.Cfg_ExtendDelay}"/>
+                <connection name="Minimum" expression="&quot;#5&quot;"/>
+                <connection name="Maximum" expression="&quot;#6&quot;"/>
+            </connections>
+        </numericInputEnable>
+        <numericInputEnable name="NumericInputEnable5" height="23" width="86" left="480" top="113" visible="true" isReferenceObject="false" audio="true" backColor="cyan" backStyle="solid" borderStyle="raised" borderUsesBackColor="true" borderWidth="4" description="" highlightColor="lime" borderColor="navy" patternColor="white" patternStyle="none" horizontalMargin="0" verticalMargin="0" shape="rectangle" touch="true" blink="false" enterKeyControlDelay="400" enterKeyHandshakeTime="4" enterKeyHoldTime="250" handshakeReset="nonZeroValue" keyNavigation="true" decimalPoint="implicit" numericPopup="keypad" rampValue="0" useVariableMinMax="true" takeFocusOnPress="false" minValue="0" maxValue="5000" captionOnBorder="false">
+            <caption fontFamily="Arial" fontSize="9" bold="false" italic="false" underline="false" strikethrough="false" caption="/*N:5 {#2.Cfg_RetractDelay} NOFILL DP:0*/ ms" color="black" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false"/>
+            <imageSettings imageName="" alignment="middleCenter" backStyle="transparent" color="white" backColor="navy" scaled="false" blink="false"/>
+            <connections>
+                <connection name="Value" expression="{#2.Cfg_RetractDelay}"/>
+                <connection name="Minimum" expression="{#2.HMI_RetractDlySPLow}"/>
+                <connection name="Maximum" expression="{#2.HMI_RetractDlySPHigh}"/>
+            </connections>
+        </numericInputEnable>
+        <numericInputEnable name="NumericInputEnable19" height="23" width="86" left="480" top="137" visible="true" isReferenceObject="false" audio="true" backColor="cyan" backStyle="solid" borderStyle="raised" borderUsesBackColor="true" borderWidth="4" description="" highlightColor="lime" borderColor="navy" patternColor="white" patternStyle="none" horizontalMargin="0" verticalMargin="0" shape="rectangle" touch="true" blink="false" enterKeyControlDelay="400" enterKeyHandshakeTime="4" enterKeyHoldTime="250" handshakeReset="nonZeroValue" keyNavigation="true" decimalPoint="implicit" numericPopup="keypad" rampValue="0" useVariableMinMax="false" takeFocusOnPress="false" minValue="0" maxValue="5000" captionOnBorder="false">
+            <caption fontFamily="Arial" fontSize="9" bold="false" italic="false" underline="false" strikethrough="false" caption="/*N:5 {#2.Cfg_ExtCondTime} NOFILL DP:0*/ ms" color="black" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false"/>
+            <imageSettings imageName="" alignment="middleCenter" backStyle="transparent" color="white" backColor="navy" scaled="false" blink="false"/>
+            <animations>
+                <animateVisibility expression="CurrentUserHasCode(P)" expressionTrueState="visible"/>
+            </animations>
+            <connections>
+                <connection name="Value" expression="{#2.Cfg_ExtCondTime}"/>
+            </connections>
+        </numericInputEnable>
+        <numericInputEnable name="NumericInputEnable20" height="23" width="86" left="480" top="161" visible="true" isReferenceObject="false" audio="true" backColor="cyan" backStyle="solid" borderStyle="raised" borderUsesBackColor="true" borderWidth="4" description="" highlightColor="lime" borderColor="navy" patternColor="white" patternStyle="none" horizontalMargin="0" verticalMargin="0" shape="rectangle" touch="true" blink="false" enterKeyControlDelay="400" enterKeyHandshakeTime="4" enterKeyHoldTime="250" handshakeReset="nonZeroValue" keyNavigation="true" decimalPoint="implicit" numericPopup="keypad" rampValue="0" useVariableMinMax="false" takeFocusOnPress="false" minValue="0" maxValue="5000" captionOnBorder="false">
+            <caption fontFamily="Arial" fontSize="9" bold="false" italic="false" underline="false" strikethrough="false" caption="/*N:5 {#2.Cfg_RetCondTime} NOFILL DP:0*/ ms" color="black" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false"/>
+            <imageSettings imageName="" alignment="middleCenter" backStyle="transparent" color="white" backColor="navy" scaled="false" blink="false"/>
+            <animations>
+                <animateVisibility expression="CurrentUserHasCode(P)" expressionTrueState="visible"/>
+            </animations>
+            <connections>
+                <connection name="Value" expression="{#2.Cfg_RetCondTime}"/>
+            </connections>
+        </numericInputEnable>
+        <parameters>
+            <parameter name="#1" description="Cylinder Name e.g. Cylinder 1" value=""/>
+            <parameter name="#2" description="PLC address &amp; AOI name e.g. {::[AOI]Program:MainProgram.Cylinder2In1Out}" value=""/>
+            <parameter name="#3" description="Cylinder Fault Time Minimum Setpoint" value=""/>
+            <parameter name="#4" description="Cylinder Fault Time Maximum Setpoint" value=""/>
+            <parameter name="#5" description="Extend Delay Time Minimum Setpoint" value=""/>
+            <parameter name="#6" description="Extend Delay Time Maximum Setpoint" value=""/>
+            <parameter name="#7" description="Retract Delay Time Minimum Setpoint" value=""/>
+            <parameter name="#8" description="Retract Delay Time Maximum Setpoint" value=""/>
+        </parameters>
+    </group>
+    <group name="Cylinder_IO1" visible="true" wallpaper="false" isReferenceObject="false">
+        <group name="Group16" visible="true" isReferenceObject="false">
+            <panel name="Panel16" height="160" width="260" left="15" top="37" visible="true" isReferenceObject="false" backStyle="solid" patternStyle="none" backColor="silver" patternColor="white" blink="false" description="" borderColor="silver" borderStyle="raisedInset" borderWidth="6" borderUsesBackColor="true"/>
+            <text name="Text31" height="16" width="224" left="33" top="44" visible="true" isReferenceObject="false" backStyle="transparent" backColor="silver" foreColor="black" wordWrap="false" sizeToFit="false" alignment="middleCenter" fontFamily="Arial" fontSize="10" bold="true" italic="false" underline="false" strikethrough="false" caption="/*LS:0 {#1}*/"/>
+        </group>
+        <group name="Group21" visible="true" isReferenceObject="false">
+            <multistateIndicator name="MultistateIndicator13" height="10" width="18" left="26" top="160" visible="true" isReferenceObject="false" backStyle="solid" borderStyle="raised" borderUsesBackColor="true" borderWidth="3" description="" shape="rectangle" triggerType="value" currentStateId="1" captionOnBorder="false" setLastStateId="2">
+                <states>
+                    <state stateId="Error" backColor="silver" borderColor="silver" patternColor="white" patternStyle="none" blink="false">
+                        <caption fontFamily="Arial" fontSize="9" bold="false" italic="false" underline="false" strikethrough="false" caption="Error" color="white" backColor="silver" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false"/>
+                        <imageSettings imageName="" alignment="middleCenter" backStyle="transparent" color="white" backColor="silver" scaled="false" blink="false"/>
+                    </state>
+                    <state stateId="0" value="0" backColor="gray" borderColor="silver" patternColor="white" patternStyle="none" blink="false">
+                        <caption fontFamily="Arial" fontSize="9" bold="false" italic="false" underline="false" strikethrough="false" caption="" color="white" backColor="silver" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false"/>
+                        <imageSettings imageName="" alignment="middleCenter" backStyle="transparent" color="white" backColor="silver" scaled="false" blink="false"/>
+                    </state>
+                    <state stateId="1" value="1" backColor="red" borderColor="silver" patternColor="white" patternStyle="none" blink="false">
+                        <caption fontFamily="Arial" fontSize="9" bold="false" italic="false" underline="false" strikethrough="false" caption="" color="white" backColor="silver" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false"/>
+                        <imageSettings imageName="" alignment="middleCenter" backStyle="transparent" color="white" backColor="silver" scaled="false" blink="false"/>
+                    </state>
+                </states>
+                <connections>
+                    <connection name="Indicator" expression="{#2.Flt_FailedToExtend}"/>
+                </connections>
+            </multistateIndicator>
+            <text name="Text35" height="16" width="80" left="48" top="157" visible="true" isReferenceObject="false" backStyle="transparent" backColor="white" foreColor="black" wordWrap="false" sizeToFit="false" alignment="bottomLeft" fontFamily="Arial" fontSize="9" bold="false" italic="false" underline="false" strikethrough="false" caption="Extend Fault"/>
+        </group>
+        <group name="Group20" visible="true" isReferenceObject="false">
+            <multistateIndicator name="MultistateIndicator12" height="10" width="18" left="26" top="146" visible="true" isReferenceObject="false" backStyle="solid" borderStyle="raised" borderUsesBackColor="true" borderWidth="3" description="" shape="rectangle" triggerType="value" currentStateId="1" captionOnBorder="false" setLastStateId="2">
+                <states>
+                    <state stateId="Error" backColor="silver" borderColor="silver" patternColor="white" patternStyle="none" blink="false">
+                        <caption fontFamily="Arial" fontSize="9" bold="false" italic="false" underline="false" strikethrough="false" caption="Error" color="white" backColor="silver" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false"/>
+                        <imageSettings imageName="" alignment="middleCenter" backStyle="transparent" color="white" backColor="silver" scaled="false" blink="false"/>
+                    </state>
+                    <state stateId="0" value="0" backColor="gray" borderColor="silver" patternColor="white" patternStyle="none" blink="false">
+                        <caption fontFamily="Arial" fontSize="9" bold="false" italic="false" underline="false" strikethrough="false" caption="" color="white" backColor="silver" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false"/>
+                        <imageSettings imageName="" alignment="middleCenter" backStyle="transparent" color="white" backColor="silver" scaled="false" blink="false"/>
+                    </state>
+                    <state stateId="1" value="1" backColor="red" borderColor="silver" patternColor="white" patternStyle="none" blink="false">
+                        <caption fontFamily="Arial" fontSize="9" bold="false" italic="false" underline="false" strikethrough="false" caption="" color="white" backColor="silver" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false"/>
+                        <imageSettings imageName="" alignment="middleCenter" backStyle="transparent" color="white" backColor="silver" scaled="false" blink="false"/>
+                    </state>
+                </states>
+                <connections>
+                    <connection name="Indicator" expression="{#2.Flt_FailedToRetract}"/>
+                </connections>
+            </multistateIndicator>
+            <text name="Text33" height="16" width="80" left="48" top="143" visible="true" isReferenceObject="false" backStyle="transparent" backColor="white" foreColor="black" wordWrap="false" sizeToFit="false" alignment="bottomLeft" fontFamily="Arial" fontSize="9" bold="false" italic="false" underline="false" strikethrough="false" caption="Retract Fault"/>
+        </group>
+        <group name="Group22" visible="true" isReferenceObject="false">
+            <multistateIndicator name="MultistateIndicator14" height="10" width="18" left="26" top="174" visible="true" isReferenceObject="false" backStyle="solid" borderStyle="raised" borderUsesBackColor="true" borderWidth="3" description="" shape="rectangle" triggerType="value" currentStateId="1" captionOnBorder="false" setLastStateId="2">
+                <states>
+                    <state stateId="Error" backColor="silver" borderColor="silver" patternColor="white" patternStyle="none" blink="false">
+                        <caption fontFamily="Arial" fontSize="9" bold="false" italic="false" underline="false" strikethrough="false" caption="Error" color="white" backColor="silver" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false"/>
+                        <imageSettings imageName="" alignment="middleCenter" backStyle="transparent" color="white" backColor="silver" scaled="false" blink="false"/>
+                    </state>
+                    <state stateId="0" value="0" backColor="gray" borderColor="silver" patternColor="white" patternStyle="none" blink="false">
+                        <caption fontFamily="Arial" fontSize="9" bold="false" italic="false" underline="false" strikethrough="false" caption="" color="white" backColor="silver" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false"/>
+                        <imageSettings imageName="" alignment="middleCenter" backStyle="transparent" color="white" backColor="silver" scaled="false" blink="false"/>
+                    </state>
+                    <state stateId="1" value="1" backColor="red" borderColor="silver" patternColor="white" patternStyle="none" blink="false">
+                        <caption fontFamily="Arial" fontSize="9" bold="false" italic="false" underline="false" strikethrough="false" caption="" color="white" backColor="silver" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false"/>
+                        <imageSettings imageName="" alignment="middleCenter" backStyle="transparent" color="white" backColor="silver" scaled="false" blink="false"/>
+                    </state>
+                </states>
+                <connections>
+                    <connection name="Indicator" expression="{#2.Flt_SignalFault}"/>
+                </connections>
+            </multistateIndicator>
+            <text name="Text44" height="16" width="80" left="48" top="171" visible="true" isReferenceObject="false" backStyle="transparent" backColor="white" foreColor="black" wordWrap="false" sizeToFit="false" alignment="bottomLeft" fontFamily="Arial" fontSize="9" bold="false" italic="false" underline="false" strikethrough="false" caption="Signal Fault"/>
+        </group>
+        <text name="Text32" height="16" width="112" left="89" top="129" visible="true" isReferenceObject="false" backStyle="transparent" backColor="white" foreColor="black" wordWrap="false" sizeToFit="false" alignment="middleCenter" fontFamily="Arial" fontSize="9" bold="true" italic="false" underline="false" strikethrough="false" caption="Status"/>
+        <group name="Group6" visible="true" isReferenceObject="false">
+            <multistateIndicator name="MultistateIndicator19" height="10" width="18" left="148" top="146" visible="true" isReferenceObject="false" backStyle="solid" borderStyle="raised" borderUsesBackColor="true" borderWidth="3" description="" shape="rectangle" triggerType="value" currentStateId="1" captionOnBorder="false" setLastStateId="2">
+                <states>
+                    <state stateId="Error" backColor="silver" borderColor="silver" patternColor="white" patternStyle="none" blink="false">
+                        <caption fontFamily="Arial" fontSize="9" bold="false" italic="false" underline="false" strikethrough="false" caption="Error" color="white" backColor="silver" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false"/>
+                        <imageSettings imageName="" alignment="middleCenter" backStyle="transparent" color="white" backColor="silver" scaled="false" blink="false"/>
+                    </state>
+                    <state stateId="0" value="0" backColor="gray" borderColor="silver" patternColor="white" patternStyle="none" blink="false">
+                        <caption fontFamily="Arial" fontSize="9" bold="false" italic="false" underline="false" strikethrough="false" caption="" color="white" backColor="silver" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false"/>
+                        <imageSettings imageName="" alignment="middleCenter" backStyle="transparent" color="white" backColor="silver" scaled="false" blink="false"/>
+                    </state>
+                    <state stateId="1" value="1" backColor="lime" borderColor="silver" patternColor="white" patternStyle="none" blink="false">
+                        <caption fontFamily="Arial" fontSize="9" bold="false" italic="false" underline="false" strikethrough="false" caption="" color="white" backColor="silver" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false"/>
+                        <imageSettings imageName="" alignment="middleCenter" backStyle="transparent" color="white" backColor="silver" scaled="false" blink="false"/>
+                    </state>
+                </states>
+                <connections>
+                    <connection name="Indicator" expression="{#2.Sts_AutoMode}"/>
+                </connections>
+            </multistateIndicator>
+            <text name="Text49" height="16" width="80" left="170" top="143" visible="true" isReferenceObject="false" backStyle="transparent" backColor="white" foreColor="black" wordWrap="false" sizeToFit="false" alignment="bottomLeft" fontFamily="Arial" fontSize="9" bold="false" italic="false" underline="false" strikethrough="false" caption="Auto Mode"/>
+        </group>
+        <group name="Group7" visible="true" isReferenceObject="false">
+            <multistateIndicator name="MultistateIndicator20" height="10" width="18" left="148" top="160" visible="true" isReferenceObject="false" backStyle="solid" borderStyle="raised" borderUsesBackColor="true" borderWidth="3" description="" shape="rectangle" triggerType="value" currentStateId="1" captionOnBorder="false" setLastStateId="2">
+                <states>
+                    <state stateId="Error" backColor="silver" borderColor="silver" patternColor="white" patternStyle="none" blink="false">
+                        <caption fontFamily="Arial" fontSize="9" bold="false" italic="false" underline="false" strikethrough="false" caption="Error" color="white" backColor="silver" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false"/>
+                        <imageSettings imageName="" alignment="middleCenter" backStyle="transparent" color="white" backColor="silver" scaled="false" blink="false"/>
+                    </state>
+                    <state stateId="0" value="0" backColor="gray" borderColor="silver" patternColor="white" patternStyle="none" blink="false">
+                        <caption fontFamily="Arial" fontSize="9" bold="false" italic="false" underline="false" strikethrough="false" caption="" color="white" backColor="silver" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false"/>
+                        <imageSettings imageName="" alignment="middleCenter" backStyle="transparent" color="white" backColor="silver" scaled="false" blink="false"/>
+                    </state>
+                    <state stateId="1" value="1" backColor="lime" borderColor="silver" patternColor="white" patternStyle="none" blink="false">
+                        <caption fontFamily="Arial" fontSize="9" bold="false" italic="false" underline="false" strikethrough="false" caption="" color="white" backColor="silver" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false"/>
+                        <imageSettings imageName="" alignment="middleCenter" backStyle="transparent" color="white" backColor="silver" scaled="false" blink="false"/>
+                    </state>
+                </states>
+                <connections>
+                    <connection name="Indicator" expression="{#2.Sts_ManualMode}"/>
+                </connections>
+            </multistateIndicator>
+            <text name="Text52" height="16" width="80" left="170" top="157" visible="true" isReferenceObject="false" backStyle="transparent" backColor="white" foreColor="black" wordWrap="false" sizeToFit="false" alignment="bottomLeft" fontFamily="Arial" fontSize="9" bold="false" italic="false" underline="false" strikethrough="false" caption="Manual Mode"/>
+        </group>
+        <group name="Group8" visible="true" isReferenceObject="false">
+            <multistateIndicator name="MultistateIndicator21" height="10" width="18" left="148" top="174" visible="true" isReferenceObject="false" backStyle="solid" borderStyle="raised" borderUsesBackColor="true" borderWidth="3" description="" shape="rectangle" triggerType="value" currentStateId="1" captionOnBorder="false" setLastStateId="2">
+                <states>
+                    <state stateId="Error" backColor="silver" borderColor="silver" patternColor="white" patternStyle="none" blink="false">
+                        <caption fontFamily="Arial" fontSize="9" bold="false" italic="false" underline="false" strikethrough="false" caption="Error" color="white" backColor="silver" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false"/>
+                        <imageSettings imageName="" alignment="middleCenter" backStyle="transparent" color="white" backColor="silver" scaled="false" blink="false"/>
+                    </state>
+                    <state stateId="0" value="0" backColor="gray" borderColor="silver" patternColor="white" patternStyle="none" blink="false">
+                        <caption fontFamily="Arial" fontSize="9" bold="false" italic="false" underline="false" strikethrough="false" caption="" color="white" backColor="silver" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false"/>
+                        <imageSettings imageName="" alignment="middleCenter" backStyle="transparent" color="white" backColor="silver" scaled="false" blink="false"/>
+                    </state>
+                    <state stateId="1" value="1" backColor="lime" borderColor="silver" patternColor="white" patternStyle="none" blink="false">
+                        <caption fontFamily="Arial" fontSize="9" bold="false" italic="false" underline="false" strikethrough="false" caption="" color="white" backColor="silver" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false"/>
+                        <imageSettings imageName="" alignment="middleCenter" backStyle="transparent" color="white" backColor="silver" scaled="false" blink="false"/>
+                    </state>
+                </states>
+                <connections>
+                    <connection name="Indicator" expression="{#2.Sts_DatumMode}"/>
+                </connections>
+            </multistateIndicator>
+            <text name="Text56" height="16" width="80" left="170" top="171" visible="true" isReferenceObject="false" backStyle="transparent" backColor="white" foreColor="black" wordWrap="false" sizeToFit="false" alignment="bottomLeft" fontFamily="Arial" fontSize="9" bold="false" italic="false" underline="false" strikethrough="false" caption="Datum Mode"/>
+        </group>
+        <group name="Group4" visible="true" isReferenceObject="false">
+            <multistateIndicator name="MultistateIndicator54" height="18" width="56" left="148" top="109" visible="true" isReferenceObject="false" backStyle="solid" borderStyle="line" borderUsesBackColor="false" borderWidth="1" description="" shape="rectangle" triggerType="value" currentStateId="0" captionOnBorder="false" setLastStateId="2">
+                <states>
+                    <state stateId="Error" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false">
+                        <caption fontFamily="Arial" fontSize="9" bold="false" italic="false" underline="false" strikethrough="false" caption="Error" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false"/>
+                        <imageSettings imageName="" alignment="middleCenter" backStyle="transparent" color="white" backColor="navy" scaled="false" blink="false"/>
+                    </state>
+                    <state stateId="0" value="0" backColor="gray" borderColor="black" patternColor="white" patternStyle="none" blink="false">
+                        <caption fontFamily="Arial" fontSize="9" bold="false" italic="false" underline="false" strikethrough="false" caption="/*LS:0 {#5}*/" color="black" backColor="black" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false"/>
+                        <imageSettings imageName="" alignment="middleCenter" backStyle="transparent" color="white" backColor="black" scaled="false" blink="false"/>
+                    </state>
+                    <state stateId="1" value="1" backColor="#40FF10" borderColor="black" patternColor="white" patternStyle="none" blink="false">
+                        <caption fontFamily="Arial" fontSize="9" bold="false" italic="false" underline="false" strikethrough="false" caption="/*LS:0 {#5}*/" color="black" backColor="black" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false"/>
+                        <imageSettings imageName="" alignment="middleCenter" backStyle="transparent" color="white" backColor="black" scaled="false" blink="false"/>
+                    </state>
+                </states>
+                <connections>
+                    <connection name="Indicator" expression="{#2.Inp_Extended}"/>
+                </connections>
+            </multistateIndicator>
+            <multistateIndicator name="MultistateIndicator55" height="18" width="56" left="206" top="109" visible="true" isReferenceObject="false" backStyle="solid" borderStyle="line" borderUsesBackColor="false" borderWidth="1" description="" shape="rectangle" triggerType="value" currentStateId="0" captionOnBorder="false" setLastStateId="2">
+                <states>
+                    <state stateId="Error" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false">
+                        <caption fontFamily="Arial" fontSize="9" bold="false" italic="false" underline="false" strikethrough="false" caption="Error" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false"/>
+                        <imageSettings imageName="" alignment="middleCenter" backStyle="transparent" color="white" backColor="navy" scaled="false" blink="false"/>
+                    </state>
+                    <state stateId="0" value="0" backColor="gray" borderColor="black" patternColor="white" patternStyle="none" blink="false">
+                        <caption fontFamily="Arial" fontSize="9" bold="false" italic="false" underline="false" strikethrough="false" caption="/*LS:0 {#3}*/" color="black" backColor="black" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false"/>
+                        <imageSettings imageName="" alignment="middleCenter" backStyle="transparent" color="white" backColor="black" scaled="false" blink="false"/>
+                    </state>
+                    <state stateId="1" value="1" backColor="#40FF10" borderColor="black" patternColor="white" patternStyle="none" blink="false">
+                        <caption fontFamily="Arial" fontSize="9" bold="false" italic="false" underline="false" strikethrough="false" caption="/*LS:0 {#3}*/" color="black" backColor="black" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false"/>
+                        <imageSettings imageName="" alignment="middleCenter" backStyle="transparent" color="white" backColor="black" scaled="false" blink="false"/>
+                    </state>
+                </states>
+                <connections>
+                    <connection name="Indicator" expression="{#2.Out_Extend}"/>
+                </connections>
+            </multistateIndicator>
+        </group>
+        <group name="Group3" visible="true" isReferenceObject="false">
+            <multistateIndicator name="MultistateIndicator46" height="18" width="56" left="26" top="109" visible="true" isReferenceObject="false" backStyle="solid" borderStyle="line" borderUsesBackColor="false" borderWidth="1" description="" shape="rectangle" triggerType="value" currentStateId="1" captionOnBorder="false" setLastStateId="2">
+                <states>
+                    <state stateId="Error" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false">
+                        <caption fontFamily="Arial" fontSize="9" bold="false" italic="false" underline="false" strikethrough="false" caption="Error" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false"/>
+                        <imageSettings imageName="" alignment="middleCenter" backStyle="transparent" color="white" backColor="navy" scaled="false" blink="false"/>
+                    </state>
+                    <state stateId="0" value="0" backColor="gray" borderColor="black" patternColor="white" patternStyle="none" blink="false">
+                        <caption fontFamily="Arial" fontSize="9" bold="false" italic="false" underline="false" strikethrough="false" caption="/*LS:0 {#6}*/" color="black" backColor="black" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false"/>
+                        <imageSettings imageName="" alignment="middleCenter" backStyle="transparent" color="white" backColor="black" scaled="false" blink="false"/>
+                    </state>
+                    <state stateId="1" value="1" backColor="#40FF10" borderColor="black" patternColor="white" patternStyle="none" blink="false">
+                        <caption fontFamily="Arial" fontSize="9" bold="false" italic="false" underline="false" strikethrough="false" caption="/*LS:0 {#6}*/" color="black" backColor="black" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false"/>
+                        <imageSettings imageName="" alignment="middleCenter" backStyle="transparent" color="white" backColor="black" scaled="false" blink="false"/>
+                    </state>
+                </states>
+                <connections>
+                    <connection name="Indicator" expression="{#2.Inp_Retracted}"/>
+                </connections>
+            </multistateIndicator>
+            <multistateIndicator name="MultistateIndicator47" height="18" width="56" left="84" top="109" visible="true" isReferenceObject="false" backStyle="solid" borderStyle="line" borderUsesBackColor="false" borderWidth="1" description="" shape="rectangle" triggerType="value" currentStateId="1" captionOnBorder="false" setLastStateId="2">
+                <states>
+                    <state stateId="Error" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false">
+                        <caption fontFamily="Arial" fontSize="9" bold="false" italic="false" underline="false" strikethrough="false" caption="Error" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false"/>
+                        <imageSettings imageName="" alignment="middleCenter" backStyle="transparent" color="white" backColor="navy" scaled="false" blink="false"/>
+                    </state>
+                    <state stateId="0" value="0" backColor="gray" borderColor="black" patternColor="white" patternStyle="none" blink="false">
+                        <caption fontFamily="Arial" fontSize="9" bold="false" italic="false" underline="false" strikethrough="false" caption="/*LS:0 {#4}*/" color="black" backColor="black" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false"/>
+                        <imageSettings imageName="" alignment="middleCenter" backStyle="transparent" color="white" backColor="black" scaled="false" blink="false"/>
+                    </state>
+                    <state stateId="1" value="1" backColor="#40FF10" borderColor="black" patternColor="white" patternStyle="none" blink="false">
+                        <caption fontFamily="Arial" fontSize="9" bold="false" italic="false" underline="false" strikethrough="false" caption="/*LS:0 {#4}*/" color="black" backColor="black" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false"/>
+                        <imageSettings imageName="" alignment="middleCenter" backStyle="transparent" color="white" backColor="black" scaled="false" blink="false"/>
+                    </state>
+                </states>
+                <connections>
+                    <connection name="Indicator" expression="{#2.Out_Retract}"/>
+                </connections>
+            </multistateIndicator>
+        </group>
+        <group name="Group5" visible="true" isReferenceObject="false">
+            <group name="Group2" visible="true" isReferenceObject="false">
+                <panel name="Panel2" height="44" width="90" left="160" top="63" visible="true" isReferenceObject="false" backStyle="solid" patternStyle="none" backColor="#A0A0A4" patternColor="white" blink="false" description="" borderColor="gray" borderStyle="raised" borderWidth="3" borderUsesBackColor="false"/>
+                <text name="Text2" height="44" width="80" left="165" top="63" visible="true" isReferenceObject="false" backStyle="transparent" backColor="white" foreColor="gray" wordWrap="true" sizeToFit="false" alignment="middleCenter" fontFamily="Arial" fontSize="9" bold="true" italic="false" underline="false" strikethrough="false" caption="EXTEND&#xA;/*LS:0 {#7}*/"/>
+            </group>
+            <group name="Group1" visible="true" isReferenceObject="false">
+                <panel name="Panel1" height="44" width="90" left="38" top="63" visible="true" isReferenceObject="false" backStyle="solid" patternStyle="none" backColor="#A0A0A4" patternColor="white" blink="false" description="" borderColor="gray" borderStyle="raised" borderWidth="3" borderUsesBackColor="false"/>
+                <text name="Text6" height="44" width="80" left="43" top="63" visible="true" isReferenceObject="false" backStyle="transparent" backColor="white" foreColor="gray" wordWrap="true" sizeToFit="false" alignment="middleCenter" fontFamily="Arial" fontSize="9" bold="true" italic="false" underline="false" strikethrough="false" caption="RETRACT&#xA;/*LS:0 {#8}*/"/>
+            </group>
+        </group>
+        <momentaryButton name="MomentaryPushButton10" height="44" width="90" left="38" top="63" visible="true" isReferenceObject="false" audio="false" backStyle="solid" borderStyle="raised" borderUsesBackColor="true" borderWidth="3" buttonAction="normallyOpen" description="" holdTime="250" highlightColor="lime" horizontalMargin="0" verticalMargin="0" shape="rectangle" touch="true" currentStateId="0" captionOnBorder="false">
+            <states>
+                <state stateId="Error" backColor="gray" borderColor="gray" patternColor="white" patternStyle="none" blink="false">
+                    <caption fontFamily="Arial" fontSize="9" bold="true" italic="false" underline="false" strikethrough="false" caption="E" color="black" backColor="silver" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false"/>
+                    <imageSettings imageName="" alignment="middleCenter" backStyle="transparent" color="white" backColor="silver" scaled="false" blink="false"/>
+                </state>
+                <state stateId="0" backColor="gray" borderColor="gray" patternColor="white" patternStyle="none" blink="false">
+                    <caption fontFamily="Arial" fontSize="9" bold="true" italic="false" underline="false" strikethrough="false" caption="RETRACT&#xA;/*LS:0 {#8}*/" color="black" backColor="silver" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false"/>
+                    <imageSettings imageName="" alignment="middleCenter" backStyle="transparent" color="white" backColor="silver" scaled="false" blink="false"/>
+                </state>
+                <state stateId="1" backColor="gray" borderColor="gray" patternColor="white" patternStyle="none" blink="false">
+                    <caption fontFamily="Arial" fontSize="9" bold="true" italic="false" underline="false" strikethrough="false" caption="RETRACT&#xA;/*LS:0 {#8}*/" color="black" backColor="silver" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false"/>
+                    <imageSettings imageName="" alignment="middleCenter" backStyle="transparent" color="white" backColor="silver" scaled="false" blink="false"/>
+                </state>
+            </states>
+            <animations>
+                <animateVisibility expression="CurrentUserHasCode(O) AND {#2.Sts_ManRetractEn}" expressionTrueState="visible"/>
+            </animations>
+            <connections>
+                <connection name="Value" expression="{#2.Cmd_ManRetract}"/>
+            </connections>
+        </momentaryButton>
+        <momentaryButton name="MomentaryPushButton11" height="44" width="90" left="160" top="63" visible="true" isReferenceObject="false" audio="false" backStyle="solid" borderStyle="raised" borderUsesBackColor="true" borderWidth="3" buttonAction="normallyOpen" description="" holdTime="250" highlightColor="lime" horizontalMargin="0" verticalMargin="0" shape="rectangle" touch="true" currentStateId="0" captionOnBorder="false">
+            <states>
+                <state stateId="Error" backColor="gray" borderColor="gray" patternColor="white" patternStyle="none" blink="false">
+                    <caption fontFamily="Arial" fontSize="9" bold="true" italic="false" underline="false" strikethrough="false" caption="E" color="black" backColor="silver" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false"/>
+                    <imageSettings imageName="" alignment="middleCenter" backStyle="transparent" color="white" backColor="silver" scaled="false" blink="false"/>
+                </state>
+                <state stateId="0" backColor="gray" borderColor="gray" patternColor="white" patternStyle="none" blink="false">
+                    <caption fontFamily="Arial" fontSize="9" bold="true" italic="false" underline="false" strikethrough="false" caption="EXTEND&#xA;/*LS:0 {#7}*/" color="black" backColor="silver" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false"/>
+                    <imageSettings imageName="" alignment="middleCenter" backStyle="transparent" color="white" backColor="silver" scaled="false" blink="false"/>
+                </state>
+                <state stateId="1" backColor="gray" borderColor="gray" patternColor="white" patternStyle="none" blink="false">
+                    <caption fontFamily="Arial" fontSize="9" bold="true" italic="false" underline="false" strikethrough="false" caption="EXTEND&#xA;/*LS:0 {#7}*/" color="black" backColor="silver" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false"/>
+                    <imageSettings imageName="" alignment="middleCenter" backStyle="transparent" color="white" backColor="silver" scaled="false" blink="false"/>
+                </state>
+            </states>
+            <animations>
+                <animateVisibility expression="CurrentUserHasCode(O) AND {#2.Sts_ManExtendEn}" expressionTrueState="visible"/>
+            </animations>
+            <connections>
+                <connection name="Value" expression="{#2.Cmd_ManExtend}"/>
+            </connections>
+        </momentaryButton>
+        <parameters>
+            <parameter name="#1" description="Cylinder Name e.g. Cylinder 1" value=""/>
+            <parameter name="#2" description="PLC address &amp; AOI name e.g. {::[AOI]Program:MainProgram.Cylinder2In1Out}" value=""/>
+            <parameter name="#3" description="Extend Output Elecrical Reference e.g. EO001" value=""/>
+            <parameter name="#4" description="Retract Output Elecrical Reference e.g. RO001" value=""/>
+            <parameter name="#5" description="Extended Input Elecrical Reference e.g. EI001" value=""/>
+            <parameter name="#6" description="Retracted Input Elecrical Reference e.g. RI001" value=""/>
+            <parameter name="#7" description="Extend Description e.g. Open , Close , Up , Down" value=""/>
+            <parameter name="#8" description="Retract Description e.g. Open , Close , Up , Down" value=""/>
+        </parameters>
+    </group>
+    <momentaryButton name="MomentaryPushButton2" height="55" width="112" left="100" top="270" visible="true" wallpaper="false" isReferenceObject="false" audio="false" backStyle="solid" borderStyle="raised" borderUsesBackColor="true" borderWidth="2" buttonAction="normallyOpen" description="" holdTime="250" highlightColor="lime" horizontalMargin="0" verticalMargin="0" shape="rectangle" touch="true" currentStateId="0" captionOnBorder="false">
+        <states>
+            <state stateId="Error" backColor="gray" borderColor="gray" patternColor="white" patternStyle="none" blink="false">
+                <caption fontFamily="Arial" fontSize="9" bold="true" italic="false" underline="false" strikethrough="false" caption="E" color="black" backColor="silver" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false"/>
+                <imageSettings imageName="" alignment="middleCenter" backStyle="transparent" color="white" backColor="silver" scaled="false" blink="false"/>
+            </state>
+            <state stateId="0" backColor="gray" borderColor="gray" patternColor="white" patternStyle="none" blink="false">
+                <caption fontFamily="Arial" fontSize="10" bold="true" italic="false" underline="false" strikethrough="false" caption="RESET&#xA;/*LS:0 {#1}*/" color="black" backColor="silver" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false"/>
+                <imageSettings imageName="" alignment="middleCenter" backStyle="transparent" color="white" backColor="silver" scaled="false" blink="false"/>
+            </state>
+            <state stateId="1" backColor="gray" borderColor="gray" patternColor="white" patternStyle="none" blink="false">
+                <caption fontFamily="Arial" fontSize="10" bold="true" italic="false" underline="false" strikethrough="false" caption="RESET&#xA;/*LS:0 {#1}*/" color="black" backColor="silver" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false"/>
+                <imageSettings imageName="" alignment="middleCenter" backStyle="transparent" color="white" backColor="silver" scaled="false" blink="false"/>
+            </state>
+        </states>
+        <connections>
+            <connection name="Value" expression="{#2.Cmd_FaultReset}"/>
+        </connections>
+        <parameters>
+            <parameter name="#1" description="Cylinder Name e.g. Cylinder 1" value=""/>
+            <parameter name="#2" description="PLC address &amp; AOI name e.g. {::[AOI]Program:MainProgram.Cylinder2In2Out}" value=""/>
+        </parameters>
+    </momentaryButton>
+    <momentaryButton name="MomentaryPushButton1" height="55" width="112" left="100" top="390" visible="true" wallpaper="false" isReferenceObject="false" audio="false" backStyle="solid" borderStyle="raised" borderUsesBackColor="true" borderWidth="2" buttonAction="normallyOpen" description="" holdTime="250" highlightColor="lime" horizontalMargin="0" verticalMargin="0" shape="rectangle" touch="true" currentStateId="1" captionOnBorder="false">
+        <states>
+            <state stateId="Error" backColor="gray" borderColor="gray" patternColor="white" patternStyle="none" blink="false">
+                <caption fontFamily="Arial" fontSize="9" bold="true" italic="false" underline="false" strikethrough="false" caption="E" color="black" backColor="silver" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false"/>
+                <imageSettings imageName="" alignment="middleCenter" backStyle="transparent" color="white" backColor="silver" scaled="false" blink="false"/>
+            </state>
+            <state stateId="0" backColor="gray" borderColor="gray" patternColor="white" patternStyle="none" blink="false">
+                <caption fontFamily="Arial" fontSize="10" bold="true" italic="false" underline="false" strikethrough="false" caption="AUTO&#xA;/*LS:0 {#1}*/" color="black" backColor="silver" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false"/>
+                <imageSettings imageName="" alignment="middleCenter" backStyle="transparent" color="white" backColor="silver" scaled="false" blink="false"/>
+            </state>
+            <state stateId="1" backColor="gray" borderColor="gray" patternColor="white" patternStyle="none" blink="false">
+                <caption fontFamily="Arial" fontSize="10" bold="true" italic="false" underline="false" strikethrough="false" caption="AUTO&#xA;/*LS:0 {#1}*/" color="black" backColor="silver" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false"/>
+                <imageSettings imageName="" alignment="middleCenter" backStyle="transparent" color="white" backColor="silver" scaled="false" blink="false"/>
+            </state>
+        </states>
+        <connections>
+            <connection name="Value" expression="{#2}"/>
+        </connections>
+        <parameters>
+            <parameter name="#1" description="Cylinder Name e.g. Cylinder 1" value=""/>
+            <parameter name="#2" description="PLC address &amp; AOI name e.g. {::[AOI]Program:MainProgram.Cylinder2In2Out}" value=""/>
+        </parameters>
+    </momentaryButton>
+    <momentaryButton name="MomentaryPushButton3" height="55" width="112" left="100" top="330" visible="true" wallpaper="false" isReferenceObject="false" audio="false" backStyle="solid" borderStyle="raised" borderUsesBackColor="true" borderWidth="2" buttonAction="normallyOpen" description="" holdTime="250" highlightColor="lime" horizontalMargin="0" verticalMargin="0" shape="rectangle" touch="true" currentStateId="1" captionOnBorder="false">
+        <states>
+            <state stateId="Error" backColor="gray" borderColor="gray" patternColor="white" patternStyle="none" blink="false">
+                <caption fontFamily="Arial" fontSize="9" bold="true" italic="false" underline="false" strikethrough="false" caption="E" color="black" backColor="silver" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false"/>
+                <imageSettings imageName="" alignment="middleCenter" backStyle="transparent" color="white" backColor="silver" scaled="false" blink="false"/>
+            </state>
+            <state stateId="0" backColor="gray" borderColor="gray" patternColor="white" patternStyle="none" blink="false">
+                <caption fontFamily="Arial" fontSize="10" bold="true" italic="false" underline="false" strikethrough="false" caption="MANUAL&#xA;/*LS:0 {#1}*/" color="black" backColor="silver" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false"/>
+                <imageSettings imageName="" alignment="middleCenter" backStyle="transparent" color="white" backColor="silver" scaled="false" blink="false"/>
+            </state>
+            <state stateId="1" backColor="gray" borderColor="gray" patternColor="white" patternStyle="none" blink="false">
+                <caption fontFamily="Arial" fontSize="10" bold="true" italic="false" underline="false" strikethrough="false" caption="MANUAL&#xA;/*LS:0 {#1}*/" color="black" backColor="silver" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false"/>
+                <imageSettings imageName="" alignment="middleCenter" backStyle="transparent" color="white" backColor="silver" scaled="false" blink="false"/>
+            </state>
+        </states>
+        <connections>
+            <connection name="Value" expression="{#2}"/>
+        </connections>
+        <parameters>
+            <parameter name="#1" description="Cylinder Name e.g. Cylinder 1" value=""/>
+            <parameter name="#2" description="PLC address &amp; AOI name e.g. {::[AOI]Program:MainProgram.Cylinder2In2Out}" value=""/>
+        </parameters>
+    </momentaryButton>
+    <multistateButton name="MultistatePushButton1" height="55" width="112" left="639" top="81" visible="true" wallpaper="false" isReferenceObject="false" audio="true" backStyle="solid" borderStyle="raised" borderUsesBackColor="false" borderWidth="2" description="" highlightColor="lime" horizontalMargin="0" verticalMargin="0" shape="rectangle" touch="true" nextStateBasedOn="valueControl" autoRepeatDelay="400" autoRepeatRate="0" currentStateId="0" captionOnBorder="false" setLastStateId="4">
+        <states>
+            <state stateId="Error" backColor="gray" borderColor="gray" patternColor="white" patternStyle="none" blink="false">
+                <caption fontFamily="Arial" fontSize="10" bold="true" italic="false" underline="false" strikethrough="false" caption="Error" color="black" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false"/>
+                <imageSettings imageName="" alignment="middleCenter" backStyle="transparent" color="white" backColor="navy" scaled="false" blink="false"/>
+            </state>
+            <state stateId="0" value="1" backColor="gray" borderColor="gray" patternColor="white" patternStyle="none" blink="false">
+                <caption fontFamily="Arial" fontSize="10" bold="true" italic="false" underline="false" strikethrough="false" caption="AUTO&#xA;/*LS:0 {#1}*/" color="black" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false"/>
+                <imageSettings imageName="" alignment="middleCenter" backStyle="transparent" color="white" backColor="navy" scaled="false" blink="false"/>
+            </state>
+            <state stateId="1" value="2" backColor="gray" borderColor="gray" patternColor="white" patternStyle="none" blink="false">
+                <caption fontFamily="Arial" fontSize="10" bold="true" italic="false" underline="false" strikethrough="false" caption="DATUM&#xA;/*LS:0 {#1}*/" color="black" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false"/>
+                <imageSettings imageName="" alignment="middleCenter" backStyle="transparent" color="white" backColor="navy" scaled="false" blink="false"/>
+            </state>
+            <state stateId="2" value="3" backColor="gray" borderColor="gray" patternColor="white" patternStyle="none" blink="false">
+                <caption fontFamily="Arial" fontSize="10" bold="true" italic="false" underline="false" strikethrough="false" caption="MANUAL&#xA;/*LS:0 {#1}*/" color="black" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false"/>
+                <imageSettings imageName="" alignment="middleCenter" backStyle="transparent" color="white" backColor="navy" scaled="false" blink="false"/>
+            </state>
+            <state stateId="3" value="4" backColor="gray" borderColor="gray" patternColor="white" patternStyle="none" blink="false">
+                <caption fontFamily="Arial" fontSize="10" bold="true" italic="false" underline="false" strikethrough="false" caption="SINGLE CYCLE&#xA;/*LS:0 {#1}*/" color="black" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false"/>
+                <imageSettings imageName="" alignment="middleCenter" backStyle="transparent" color="white" backColor="navy" scaled="false" blink="false"/>
+            </state>
+        </states>
+        <connections>
+            <connection name="Value" expression="{#3}"/>
+        </connections>
+        <parameters>
+            <parameter name="#1" description="Cylinder Name e.g. Cylinder Head 1" value=""/>
+            <parameter name="#2" description="PLC address &amp; AOI name e.g. {::[AOI]Program:MainProgram.Cylinder2In2Out.CM01}" value=""/>
+            <parameter name="#3" description="PLC address &amp; AOI name e.g. {::[AOI]Program:MainProgram.Cylinder2In1Out.CM01}" value=""/>
+            <parameter name="#4" description="Tag Name" value=""/>
+        </parameters>
+    </multistateButton>
+    <momentaryButton name="MomentaryPushButton5" height="55" width="112" left="100" top="450" visible="true" wallpaper="false" isReferenceObject="false" audio="true" backStyle="solid" borderStyle="raised" borderUsesBackColor="true" borderWidth="2" buttonAction="normallyOpen" description="" holdTime="250" highlightColor="lime" horizontalMargin="0" verticalMargin="0" shape="rectangle" touch="true" currentStateId="0" captionOnBorder="false">
+        <states>
+            <state stateId="Error" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false">
+                <caption fontFamily="Arial" fontSize="10" bold="false" italic="false" underline="false" strikethrough="false" caption="Error" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false"/>
+                <imageSettings imageName="" alignment="middleCenter" backStyle="transparent" color="white" backColor="navy" scaled="false" blink="false"/>
+            </state>
+            <state stateId="0" backColor="gray" borderColor="gray" patternColor="white" patternStyle="none" blink="false">
+                <caption fontFamily="Arial" fontSize="10" bold="true" italic="false" underline="false" strikethrough="false" caption="SINGLE CYCLE&#xA;/*LS:0 {#1}*/" color="black" backColor="gray" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false"/>
+                <imageSettings imageName="" alignment="middleCenter" backStyle="transparent" color="white" backColor="gray" scaled="false" blink="false"/>
+            </state>
+            <state stateId="1" backColor="gray" borderColor="gray" patternColor="white" patternStyle="none" blink="false">
+                <caption fontFamily="Arial" fontSize="10" bold="true" italic="false" underline="false" strikethrough="false" caption="SINGLE CYCLE&#xA;/*LS:0 {#1}*/" color="black" backColor="gray" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false"/>
+                <imageSettings imageName="" alignment="middleCenter" backStyle="transparent" color="white" backColor="gray" scaled="false" blink="false"/>
+            </state>
+        </states>
+        <connections>
+            <connection name="Value" expression="{#2}"/>
+        </connections>
+        <parameters>
+            <parameter name="#1" description="Cylinder Name e.g. Cylinder 1" value=""/>
+            <parameter name="#2" description="Single Cycle Command Button" value=""/>
+        </parameters>
+    </momentaryButton>
+    <momentaryButton name="MomentaryPushButton7" height="55" width="112" left="100" top="510" visible="true" wallpaper="false" isReferenceObject="false" audio="false" backStyle="solid" borderStyle="raised" borderUsesBackColor="true" borderWidth="2" buttonAction="normallyOpen" description="" holdTime="250" highlightColor="lime" horizontalMargin="0" verticalMargin="0" shape="rectangle" touch="true" currentStateId="0" captionOnBorder="false">
+        <states>
+            <state stateId="Error" backColor="gray" borderColor="gray" patternColor="white" patternStyle="none" blink="false">
+                <caption fontFamily="Arial" fontSize="9" bold="true" italic="false" underline="false" strikethrough="false" caption="E" color="black" backColor="silver" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false"/>
+                <imageSettings imageName="" alignment="middleCenter" backStyle="transparent" color="white" backColor="silver" scaled="false" blink="false"/>
+            </state>
+            <state stateId="0" backColor="gray" borderColor="gray" patternColor="white" patternStyle="none" blink="false">
+                <caption fontFamily="Arial" fontSize="10" bold="true" italic="false" underline="false" strikethrough="false" caption="DATUM&#xA;/*LS:0 {#1}*/" color="black" backColor="silver" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false"/>
+                <imageSettings imageName="" alignment="middleCenter" backStyle="transparent" color="white" backColor="silver" scaled="false" blink="false"/>
+            </state>
+            <state stateId="1" backColor="gray" borderColor="gray" patternColor="white" patternStyle="none" blink="false">
+                <caption fontFamily="Arial" fontSize="10" bold="true" italic="false" underline="false" strikethrough="false" caption="DATUM&#xA;/*LS:0 {#1}*/" color="black" backColor="silver" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false"/>
+                <imageSettings imageName="" alignment="middleCenter" backStyle="transparent" color="white" backColor="silver" scaled="false" blink="false"/>
+            </state>
+        </states>
+        <connections>
+            <connection name="Value" expression="{#2}"/>
+        </connections>
+        <parameters>
+            <parameter name="#1" description="Cylinder Name e.g. Cylinder 1" value=""/>
+            <parameter name="#2" description="PLC address &amp; AOI name e.g. {::[AOI]Program:MainProgram.Cylinder2In2Out}" value=""/>
+        </parameters>
+    </momentaryButton>
+    <group name="Group9" visible="true" wallpaper="false" isReferenceObject="false">
+        <panel name="Panel3" height="55" width="112" left="215" top="390" visible="true" isReferenceObject="false" backStyle="solid" patternStyle="none" backColor="#A0A0A4" patternColor="white" blink="false" description="" borderColor="gray" borderStyle="raised" borderWidth="3" borderUsesBackColor="false"/>
+        <text name="Text3" height="55" width="100" left="221" top="390" visible="true" isReferenceObject="false" backStyle="transparent" backColor="white" foreColor="gray" wordWrap="true" sizeToFit="false" alignment="middleCenter" fontFamily="Arial" fontSize="10" bold="true" italic="false" underline="false" strikethrough="false" caption="AUTO START&#xA;/*LS:0 {#1}*/"/>
+        <momentaryButton name="MomentaryPushButton12" height="55" width="112" left="215" top="390" visible="true" isReferenceObject="false" audio="true" backStyle="solid" borderStyle="raised" borderUsesBackColor="true" borderWidth="2" buttonAction="normallyOpen" description="" holdTime="250" highlightColor="lime" horizontalMargin="0" verticalMargin="0" shape="rectangle" touch="true" currentStateId="0" captionOnBorder="false">
+            <states>
+                <state stateId="Error" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false">
+                    <caption fontFamily="Arial" fontSize="10" bold="false" italic="false" underline="false" strikethrough="false" caption="Error" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false"/>
+                    <imageSettings imageName="" alignment="middleCenter" backStyle="transparent" color="white" backColor="navy" scaled="false" blink="false"/>
+                </state>
+                <state stateId="0" backColor="gray" borderColor="gray" patternColor="white" patternStyle="none" blink="false">
+                    <caption fontFamily="Arial" fontSize="10" bold="true" italic="false" underline="false" strikethrough="false" caption="AUTO START&#xA;/*LS:0 {#1}*/" color="black" backColor="gray" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false"/>
+                    <imageSettings imageName="" alignment="middleCenter" backStyle="transparent" color="white" backColor="gray" scaled="false" blink="false"/>
+                </state>
+                <state stateId="1" backColor="gray" borderColor="gray" patternColor="white" patternStyle="none" blink="false">
+                    <caption fontFamily="Arial" fontSize="10" bold="true" italic="false" underline="false" strikethrough="false" caption="AUTO START&#xA;/*LS:0 {#1}*/" color="black" backColor="gray" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false"/>
+                    <imageSettings imageName="" alignment="middleCenter" backStyle="transparent" color="white" backColor="gray" scaled="false" blink="false"/>
+                </state>
+            </states>
+            <animations>
+                <animateVisibility expression="({#2.Sts_AutoMode} == 1) &amp;&amp; NOT({#4}) &amp;&amp; NOT({#5})" expressionTrueState="visible"/>
+            </animations>
+            <connections>
+                <connection name="Value" expression="{#3}"/>
+            </connections>
+        </momentaryButton>
+        <animations>
+            <animateVisibility expression="CurrentUserHasCode(O)" expressionTrueState="visible"/>
+        </animations>
+        <parameters>
+            <parameter name="#1" description="Cylinder Name e.g. Cylinder 1" value=""/>
+            <parameter name="#2" description="PLC address &amp; AOI name e.g. {::[AOI]Program:MainProgram.Cylinder2In2Out}" value=""/>
+            <parameter name="#3" description="Start Command Button" value=""/>
+            <parameter name="#4" description="Datum Required" value=""/>
+            <parameter name="#5" description="Running" value=""/>
+        </parameters>
+    </group>
+    <group name="Group10" visible="true" wallpaper="false" isReferenceObject="false">
+        <panel name="Panel4" height="55" width="112" left="330" top="390" visible="true" isReferenceObject="false" backStyle="solid" patternStyle="none" backColor="#A0A0A4" patternColor="white" blink="false" description="" borderColor="gray" borderStyle="raised" borderWidth="3" borderUsesBackColor="false"/>
+        <text name="Text4" height="55" width="100" left="336" top="390" visible="true" isReferenceObject="false" backStyle="transparent" backColor="white" foreColor="gray" wordWrap="true" sizeToFit="false" alignment="middleCenter" fontFamily="Arial" fontSize="10" bold="true" italic="false" underline="false" strikethrough="false" caption="AUTO STOP&#xA;/*LS:0 {#1}*/"/>
+        <latchedButton name="LatchedPushButton2" height="55" width="112" left="330" top="390" visible="true" isReferenceObject="false" audio="true" backStyle="solid" borderStyle="raised" borderUsesBackColor="true" borderWidth="2" description="" highlightColor="lime" horizontalMargin="0" verticalMargin="0" shape="rectangle" touch="true" latchResetType="zeroToNonZeroTransition" currentStateId="1" captionOnBorder="false">
+            <states>
+                <state stateId="Error" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false">
+                    <caption fontFamily="Arial" fontSize="10" bold="false" italic="false" underline="false" strikethrough="false" caption="Error" color="white" backColor="black" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false"/>
+                    <imageSettings imageName="" alignment="middleCenter" backStyle="transparent" color="white" backColor="navy" scaled="false" blink="false"/>
+                </state>
+                <state stateId="0" value="0" backColor="gray" borderColor="gray" patternColor="white" patternStyle="none" blink="false">
+                    <caption fontFamily="Arial" fontSize="10" bold="true" italic="false" underline="false" strikethrough="false" caption="AUTO STOP&#xA;/*LS:0 {#1}*/" color="black" backColor="#80FFFF" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false"/>
+                    <imageSettings imageName="" alignment="middleCenter" backStyle="transparent" color="white" backColor="gray" scaled="false" blink="false"/>
+                </state>
+                <state stateId="1" value="1" backColor="gray" borderColor="gray" patternColor="white" patternStyle="none" blink="false">
+                    <caption fontFamily="Arial" fontSize="10" bold="true" italic="false" underline="false" strikethrough="false" caption="AUTO STOP&#xA;/*LS:0 {#1}*/" color="black" backColor="#80FFFF" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false"/>
+                    <imageSettings imageName="" alignment="middleCenter" backStyle="transparent" color="white" backColor="gray" scaled="false" blink="false"/>
+                </state>
+            </states>
+            <animations>
+                <animateVisibility expression="({#2.Sts_AutoMode} == 1) &amp;&amp; ({#7})" expressionTrueState="visible"/>
+            </animations>
+            <connections>
+                <connection name="Value" expression="{#3}"/>
+                <connection name="Handshake" expression="({#4} == 1) &amp;&amp; ({#5} &amp;&amp; NOT({#6}))"/>
+            </connections>
+        </latchedButton>
+        <animations>
+            <animateVisibility expression="CurrentUserHasCode(O)" expressionTrueState="visible"/>
+        </animations>
+        <parameters>
+            <parameter name="#1" description="Cylinder Name e.g. Cylinder 1" value=""/>
+            <parameter name="#2" description="PLC address &amp; AOI name e.g. {::[AOI]Program:MainProgram.Cylinder2In1Out}" value=""/>
+            <parameter name="#3" description="Stop Command Button and PLC Address e.g. {::[AOI]Program:MainProgram.Cylinder2In1Out.CM01}" value=""/>
+            <parameter name="#4" description="Command Mode" value=""/>
+            <parameter name="#5" description="Start Command Button" value=""/>
+            <parameter name="#6" description="Datum Required" value=""/>
+            <parameter name="#7" description="Running" value=""/>
+        </parameters>
+    </group>
+    <group name="Group11" visible="true" wallpaper="false" isReferenceObject="false">
+        <panel name="Panel5" height="55" width="112" left="215" top="450" visible="true" isReferenceObject="false" backStyle="solid" patternStyle="none" backColor="#A0A0A4" patternColor="white" blink="false" description="" borderColor="gray" borderStyle="raised" borderWidth="3" borderUsesBackColor="false"/>
+        <text name="Text5" height="55" width="100" left="221" top="450" visible="true" isReferenceObject="false" backStyle="transparent" backColor="white" foreColor="gray" wordWrap="true" sizeToFit="false" alignment="middleCenter" fontFamily="Arial" fontSize="10" bold="true" italic="false" underline="false" strikethrough="false" caption="SINGLE CYCLE&#xA;/*LS:0 {#1}*/"/>
+        <momentaryButton name="MomentaryPushButton13" height="55" width="112" left="215" top="450" visible="true" isReferenceObject="false" audio="false" backStyle="solid" borderStyle="raised" borderUsesBackColor="true" borderWidth="2" buttonAction="normallyOpen" description="" holdTime="250" highlightColor="lime" horizontalMargin="0" verticalMargin="0" shape="rectangle" touch="true" currentStateId="0" captionOnBorder="false">
+            <states>
+                <state stateId="Error" backColor="gray" borderColor="gray" patternColor="white" patternStyle="none" blink="false">
+                    <caption fontFamily="Arial" fontSize="9" bold="true" italic="false" underline="false" strikethrough="false" caption="E" color="black" backColor="silver" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false"/>
+                    <imageSettings imageName="" alignment="middleCenter" backStyle="transparent" color="white" backColor="silver" scaled="false" blink="false"/>
+                </state>
+                <state stateId="0" backColor="gray" borderColor="gray" patternColor="white" patternStyle="none" blink="false">
+                    <caption fontFamily="Arial" fontSize="10" bold="true" italic="false" underline="false" strikethrough="false" caption="SINGLE CYCLE&#xA;/*LS:0 {#1}*/" color="black" backColor="silver" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false"/>
+                    <imageSettings imageName="" alignment="middleCenter" backStyle="transparent" color="white" backColor="silver" scaled="false" blink="false"/>
+                </state>
+                <state stateId="1" backColor="gray" borderColor="gray" patternColor="white" patternStyle="none" blink="false">
+                    <caption fontFamily="Arial" fontSize="10" bold="true" italic="false" underline="false" strikethrough="false" caption="SINGLE CYCLE&#xA;/*LS:0 {#1}*/" color="black" backColor="silver" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false"/>
+                    <imageSettings imageName="" alignment="middleCenter" backStyle="transparent" color="white" backColor="silver" scaled="false" blink="false"/>
+                </state>
+            </states>
+            <animations>
+                <animateVisibility expression="({#2.Sts_SingleCycle} == 1)" expressionTrueState="visible"/>
+            </animations>
+            <connections>
+                <connection name="Value" expression="{#3}"/>
+            </connections>
+        </momentaryButton>
+        <animations>
+            <animateVisibility expression="CurrentUserHasCode(O)" expressionTrueState="visible"/>
+        </animations>
+        <parameters>
+            <parameter name="#1" description="Cylinder Name e.g. Cylinder 1" value=""/>
+            <parameter name="#2" description="PLC address &amp; AOI name e.g. {::[AOI]Program:MainProgram.Cylinder2In2Out}" value=""/>
+            <parameter name="#3" description="Single Cycle Push Button" value=""/>
+        </parameters>
+    </group>
+    <group name="Group13" visible="true" wallpaper="false" isReferenceObject="false">
+        <panel name="Panel7" height="55" width="112" left="330" top="510" visible="true" isReferenceObject="false" backStyle="solid" patternStyle="none" backColor="#A0A0A4" patternColor="white" blink="false" description="" borderColor="gray" borderStyle="raised" borderWidth="3" borderUsesBackColor="false"/>
+        <text name="Text10" height="55" width="100" left="336" top="510" visible="true" isReferenceObject="false" backStyle="transparent" backColor="white" foreColor="gray" wordWrap="true" sizeToFit="false" alignment="middleCenter" fontFamily="Arial" fontSize="10" bold="true" italic="false" underline="false" strikethrough="false" caption="DATUM&#xA;EXTEND&#xA;/*LS:0 {#1}*/"/>
+        <momentaryButton name="MomentaryPushButton14" height="55" width="112" left="330" top="510" visible="true" isReferenceObject="false" audio="false" backStyle="solid" borderStyle="raised" borderUsesBackColor="true" borderWidth="2" buttonAction="normallyOpen" description="" holdTime="250" highlightColor="lime" horizontalMargin="0" verticalMargin="0" shape="rectangle" touch="true" currentStateId="0" captionOnBorder="false">
+            <states>
+                <state stateId="Error" backColor="gray" borderColor="gray" patternColor="white" patternStyle="none" blink="false">
+                    <caption fontFamily="Arial" fontSize="9" bold="true" italic="false" underline="false" strikethrough="false" caption="E" color="black" backColor="silver" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false"/>
+                    <imageSettings imageName="" alignment="middleCenter" backStyle="transparent" color="white" backColor="silver" scaled="false" blink="false"/>
+                </state>
+                <state stateId="0" backColor="gray" borderColor="gray" patternColor="white" patternStyle="none" blink="false">
+                    <caption fontFamily="Arial" fontSize="10" bold="true" italic="false" underline="false" strikethrough="false" caption="DATUM&#xA;EXTEND&#xA;/*LS:0 {#1}*/" color="black" backColor="silver" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false"/>
+                    <imageSettings imageName="" alignment="middleCenter" backStyle="transparent" color="white" backColor="silver" scaled="false" blink="false"/>
+                </state>
+                <state stateId="1" backColor="gray" borderColor="gray" patternColor="white" patternStyle="none" blink="false">
+                    <caption fontFamily="Arial" fontSize="10" bold="true" italic="false" underline="false" strikethrough="false" caption="DATUM&#xA;EXTEND&#xA;/*LS:0 {#1}*/" color="black" backColor="silver" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false"/>
+                    <imageSettings imageName="" alignment="middleCenter" backStyle="transparent" color="white" backColor="silver" scaled="false" blink="false"/>
+                </state>
+            </states>
+            <animations>
+                <animateVisibility expression="({#2.Sts_DatumMode} == 1)" expressionTrueState="visible"/>
+            </animations>
+            <connections>
+                <connection name="Value" expression="{#3}"/>
+            </connections>
+        </momentaryButton>
+        <animations>
+            <animateVisibility expression="CurrentUserHasCode(O)" expressionTrueState="visible"/>
+        </animations>
+        <parameters>
+            <parameter name="#1" description="Cylinder Name e.g. Cylinder 1" value=""/>
+            <parameter name="#2" description="PLC address &amp; AOI name e.g. {::[AOI]Program:MainProgram.Cylinder2In2Out}" value=""/>
+            <parameter name="#3" description="Datum Extend PB" value=""/>
+        </parameters>
+    </group>
+    <group name="Group12" visible="true" wallpaper="false" isReferenceObject="false">
+        <panel name="Panel6" height="55" width="112" left="215" top="510" visible="true" isReferenceObject="false" backStyle="solid" patternStyle="none" backColor="#A0A0A4" patternColor="white" blink="false" description="" borderColor="gray" borderStyle="raised" borderWidth="3" borderUsesBackColor="false"/>
+        <text name="Text7" height="55" width="100" left="221" top="510" visible="true" isReferenceObject="false" backStyle="transparent" backColor="white" foreColor="gray" wordWrap="true" sizeToFit="false" alignment="middleCenter" fontFamily="Arial" fontSize="10" bold="true" italic="false" underline="false" strikethrough="false" caption="DATUM&#xA;RETRACT&#xA;/*LS:0 {#1}*/"/>
+        <momentaryButton name="MomentaryPushButton15" height="55" width="112" left="215" top="510" visible="true" isReferenceObject="false" audio="false" backStyle="solid" borderStyle="raised" borderUsesBackColor="true" borderWidth="2" buttonAction="normallyOpen" description="" holdTime="250" highlightColor="lime" horizontalMargin="0" verticalMargin="0" shape="rectangle" touch="true" currentStateId="0" captionOnBorder="false">
+            <states>
+                <state stateId="Error" backColor="gray" borderColor="gray" patternColor="white" patternStyle="none" blink="false">
+                    <caption fontFamily="Arial" fontSize="9" bold="true" italic="false" underline="false" strikethrough="false" caption="E" color="black" backColor="silver" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false"/>
+                    <imageSettings imageName="" alignment="middleCenter" backStyle="transparent" color="white" backColor="silver" scaled="false" blink="false"/>
+                </state>
+                <state stateId="0" backColor="gray" borderColor="gray" patternColor="white" patternStyle="none" blink="false">
+                    <caption fontFamily="Arial" fontSize="10" bold="true" italic="false" underline="false" strikethrough="false" caption="DATUM&#xA;RETRACT&#xA;/*LS:0 {#1}*/" color="black" backColor="silver" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false"/>
+                    <imageSettings imageName="" alignment="middleCenter" backStyle="transparent" color="white" backColor="silver" scaled="false" blink="false"/>
+                </state>
+                <state stateId="1" backColor="gray" borderColor="gray" patternColor="white" patternStyle="none" blink="false">
+                    <caption fontFamily="Arial" fontSize="10" bold="true" italic="false" underline="false" strikethrough="false" caption="DATUM&#xA;RETRACT&#xA;/*LS:0 {#1}*/" color="black" backColor="silver" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false"/>
+                    <imageSettings imageName="" alignment="middleCenter" backStyle="transparent" color="white" backColor="silver" scaled="false" blink="false"/>
+                </state>
+            </states>
+            <animations>
+                <animateVisibility expression="({#2.Sts_DatumMode} == 1)" expressionTrueState="visible"/>
+            </animations>
+            <connections>
+                <connection name="Value" expression="{#3}"/>
+            </connections>
+        </momentaryButton>
+        <animations>
+            <animateVisibility expression="CurrentUserHasCode(O)" expressionTrueState="visible"/>
+        </animations>
+        <parameters>
+            <parameter name="#1" description="Cylinder Name e.g. Cylinder 1" value=""/>
+            <parameter name="#2" description="PLC address &amp; AOI name e.g. {::[AOI]Program:MainProgram.Cylinder2In2Out}" value=""/>
+            <parameter name="#3" description="Datum Retract PB" value=""/>
+        </parameters>
+    </group>
+</gfx>
